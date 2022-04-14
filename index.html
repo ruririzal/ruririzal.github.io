@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="id">
 
 <head>
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/logo/ico1.png')}}">
-    <link rel="icon" type="image/png" href="{{ asset('img/logo/ico1.png')}}">
-      
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="./fontawesome-free/css/all.min.css">
     <!-- IonIcons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Google Font: Source Sans Pro -->
@@ -32,8 +29,8 @@
 
         @font-face {
         font-family: "solution-vcard-icons";
-        src:url("{{ asset('/front_asset/fonts/solution-vcard-icons.eot') }}");
-        src:url("{{ asset('/front_asset/fonts/solution-vcard-icons.woff') }}") format("woff");
+        src:url("./fonts/solution-vcard-icons.eot");
+        src:url("./fonts/solution-vcard-icons.woff") format("woff");
         font-weight: normal;
         font-style: normal;
 
@@ -357,6 +354,11 @@
                             <i class="icon icon-phone"></i>
                             <h4><a href="tel:+6285789814068" class="ng-binding">+6285789814068</a></h4>
                             <small>Mobile</small>
+                        </div>
+                        <div class="vcard-row" ng-show="view.numbers_mobile">
+                            <i class="icon icon-phone"></i>
+                            <h4><a href="https://wa.me/6285789814068" class="ng-binding">+6285789814068</a></h4>
+                            <small>Whatsapp</small>
                         </div>
                         <div class="vcard-separator" ng-show="view.numbers_mobile || view.numbers_phone"></div>
                         <div class="vcard-row" ng-show="view.email">
