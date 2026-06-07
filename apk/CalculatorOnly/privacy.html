@@ -1,4 +1,8 @@
-# Privacy Policy - Calculator Only
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+
+<script>
+const markdown = `# Privacy Policy - Calculator Only
 
 **Last updated:** June 7, 2026
 
@@ -38,3 +42,12 @@ The App requests **no permissions**. It does not access:
 - Contacts or calendar
 - Location or phone state
 - Internet or network
+`;
+
+const html = marked.parse(markdown);
+const safeHtml = DOMPurify.sanitize(html);
+
+document.getElementById('preview').innerHTML = safeHtml;
+</script>
+
+<div id="preview"></div>
